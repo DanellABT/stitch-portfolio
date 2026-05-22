@@ -1,0 +1,357 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.custom-navbar {
+  background: #FFF1E3 !important;
+}
+
+.navbar-brand {
+  color: #A2391A;
+}
+
+.navbar-nav a {
+  color: #A2391A;
+}
+
+.landing-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -0.96px;
+}
+
+.highlight {
+  color: #A2391A;
+}
+
+.landing-subtext {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.btn-view-projects, .btn-lets-talk {
+  width: 168px;
+  height: 60px;
+  opacity: 1;
+  border-radius: 16px;
+  background: #A2451A;
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-circle {
+  width: 100%;
+  max-width: 400px; 
+  height: auto;
+  aspect-ratio: 1 / 1; 
+  margin: 0 auto; 
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #fff;
+  margin-top: 2rem; 
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar-nav .nav-link {
+    padding: 8px 0;
+    display: block;
+    color: #A2391A !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .avatar-circle {
+    margin-top: 0;
+    margin-left: auto;
+  }
+}
+
+.avatar-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.projects-container {
+  width: 100%;
+  min-height: 924px;
+  background: #FFF1E3;
+}
+
+.showcase-font {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  color: #A2391A;
+}
+
+.projects-font {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  color: #211B12;
+}
+
+.project-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-link {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  display: block;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #211B12;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.project-card p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  display: block;
+  padding: 15px;
+  font-size: 16px;
+  color: #211B12;
+}
+
+.technology-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  color: #A2391A;
+}
+
+.tools-text-tools, .tools-text-skills {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  color: #211B12;
+}
+
+.tools-text-tools {
+  padding-bottom: 40px;
+}
+
+.tools {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tools-item {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #F3E6D8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.tools-item img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.tools-col {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  color: #211B12;
+  padding-top: 10px;
+}
+
+.skill-badge {
+  width: 170px;
+  height: 48px;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  background: #F3E6D8 !important;
+}
+
+.skill-badge-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #A2391A;
+}
+
+.contact-container {
+  width: 100%;
+  background: #FFF1E3;
+}
+
+.contact-contact {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  color: #A2391A;
+}
+
+.contact-git {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -0.96px;
+  color: #211B12;
+}
+
+.contact-info {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  margin-top: 20px;
+}
+
+.contact-mail, .contact-location {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: rgba(162, 57, 26, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.contact-mail img, .contact-location img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.email-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 528px;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid #f2e1d1;
+  background: #FFF8F3;
+}
+
+@media (min-width: 768px) {
+  .form-container {
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+}
+
+.btn-send {
+  background-color: #A2391A;
+  color: white;
+  width: 100%;
+  max-width: 446px;
+  height: 64px;
+  border-radius: 16px;
+  border: none;
+  font-weight: 600;
+  display: block;
+  margin: 0 auto;
+}
+
+.contact-input {
+  background-color: rgba(162, 57, 26, 0.05); 
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  width: 100%;
+}
+
+textarea.contact-input {
+  resize: none;
+}
+
+.contact-input:focus {
+  background-color: #fff;
+  border-color: #A2391A;
+  box-shadow: none;
+  outline: none;
+}
+
+.form-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: block;
+  color: #333;
+}
+
+footer {
+  background: #FFF8F3;
+}
+
+.footer-portfolio {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  color: #A2391A !important;
+}
+
+.footer-social-link {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  color: #57423C;
+}

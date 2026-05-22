@@ -1,259 +1,491 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Full Stack Web Developer</title>
 
-  <meta name="description" content="">
-
-  <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="https://danellabt.github.io/webportfolio/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Full Stack Web Developer">
-  <meta property="og:description" content="Web Portfolio">
-  <meta property="og:image" content="https://github.com/DanellABT/webportfolio/blob/master/images/danellpfp.jpg">
-
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:domain" content="danellabt.github.io">
-  <meta property="twitter:url" content="https://danellabt.github.io/webportfolio/">
-  <meta name="twitter:title" content="Full Stack Web Developer">
-  <meta name="twitter:description" content="Web Portfolio">
-  <meta name="twitter:image" content="https://github.com/DanellABT/webportfolio/blob/master/images/danellpfp.jpg">
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
-  <!-- FavIcon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="manifest" href="images/site.webmanifest">
-
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="index.css">
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Danell Turla | Full Stack Web Developer Portfolio</title>
+<meta content="Portfolio of Danell Turla, a Full Stack Web Developer specializing in robust, scalable web applications and high-performance digital solutions." name="description"/>
+<!-- Open Graph -->
+<meta content="Danell Turla | Full Stack Web Developer" property="og:title"/>
+<meta content="Building the future through scalable web applications and human-centric design." property="og:description"/>
+<meta content="https://danell-turla.dev" property="og:url"/>
+<meta content="website" property="og:type"/>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .parallax-section {
+            background-attachment: fixed;
+        }
+        @media (max-width: 768px) {
+            .bento-grid {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-container": "#67625e",
+                        "surface": "#fff8f0",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#1e1b18",
+                        "error-container": "#ffdad6",
+                        "charcoal": "#2D2926",
+                        "on-tertiary-container": "#e1d2bf",
+                        "cream": "#FBEBD7",
+                        "surface-variant": "#e8e2d8",
+                        "on-tertiary-fixed": "#221a0e",
+                        "background": "#fff8f0",
+                        "secondary": "#635d5a",
+                        "outline-variant": "#dcc1b7",
+                        "on-tertiary-fixed-variant": "#4f4537",
+                        "linen": "#FFF8EE",
+                        "surface-bright": "#fff8f0",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-dim": "#e0d9d0",
+                        "inverse-primary": "#ffb59b",
+                        "on-primary-fixed": "#380d00",
+                        "on-surface-variant": "#56423c",
+                        "surface-container-low": "#faf3e9",
+                        "tertiary-fixed": "#f0e0cc",
+                        "terracotta": "#9A401B",
+                        "on-primary-container": "#ffc8b5",
+                        "primary-container": "#9a401b",
+                        "on-secondary": "#ffffff",
+                        "primary": "#7b2904",
+                        "on-surface": "#1e1b16",
+                        "outline": "#89726a",
+                        "secondary-fixed": "#e9e1dc",
+                        "surface-container-high": "#eee7dd",
+                        "secondary-fixed-dim": "#cdc5c0",
+                        "tertiary-fixed-dim": "#d3c4b1",
+                        "inverse-surface": "#33302a",
+                        "secondary-container": "#e6ded9",
+                        "surface-container": "#f4ede3",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#ffb59b",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#4c4334",
+                        "primary-fixed": "#ffdbcf",
+                        "surface-tint": "#9d421d",
+                        "inverse-on-surface": "#f7f0e6",
+                        "surface-container-highest": "#e8e2d8",
+                        "on-secondary-fixed-variant": "#4b4642",
+                        "on-primary-fixed-variant": "#7e2c07",
+                        "on-background": "#1e1b16",
+                        "tertiary-container": "#655a4b"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "section-gap": "120px",
+                        "margin-desktop": "64px"
+                    },
+                    fontFamily: {
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "headline-xl-mobile": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"]
+                    },
+                    fontSize: {
+                        "headline-xl": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-xl-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["20px", { "lineHeight": "32px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
 </head>
-<body>
+<body class="bg-linen text-charcoal font-body-md selection:bg-terracotta/20">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 w-full z-50 border-b border-charcoal/10 bg-linen/80 glass-header" id="top-app-bar">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-16 w-full">
+<a class="font-headline-md text-headline-md font-bold text-charcoal flex items-center gap-2" href="#">
+<span aria-hidden="true" class="material-symbols-outlined text-terracotta">terminal</span>
+                DevPortfolio
+            </a>
+<!-- Desktop Nav -->
+<nav aria-label="Main Navigation" class="hidden md:flex gap-8 items-center">
+<a class="text-terracotta font-bold border-b-2 border-terracotta pb-1 font-label-sm text-label-sm" href="#home">Home</a>
+<a class="text-charcoal font-label-sm text-label-sm hover:text-terracotta transition-colors duration-200" href="#projects">Projects</a>
+<a class="text-charcoal font-label-sm text-label-sm hover:text-terracotta transition-colors duration-200" href="#tools">Tools</a>
+<a class="text-charcoal font-label-sm text-label-sm hover:text-terracotta transition-colors duration-200" href="#contact">Contact</a>
+</nav>
+<button aria-label="Toggle Menu" class="md:hidden text-charcoal active:scale-95 transition-transform" id="mobile-menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Mobile Drawer Overlay -->
+<div class="fixed inset-0 bg-charcoal/40 z-[60] hidden transition-opacity duration-300" id="drawer-overlay"></div>
+<aside class="fixed top-0 right-0 h-full w-72 bg-linen z-[70] translate-x-full transition-transform duration-300 flex flex-col p-6 gap-4" id="nav-drawer">
+<div class="flex justify-between items-center mb-8">
+<span class="font-headline-md text-headline-md-mobile font-bold text-charcoal">Navigation</span>
+<button aria-label="Close menu" id="close-drawer">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 p-4 bg-terracotta/10 text-terracotta font-bold rounded-full transition-all" href="#home">
+<span class="material-symbols-outlined">home</span> Home
+            </a>
+<a class="flex items-center gap-4 p-4 text-charcoal hover:bg-cream transition-colors rounded-full" href="#projects">
+<span class="material-symbols-outlined">work</span> Projects
+            </a>
+<a class="flex items-center gap-4 p-4 text-charcoal hover:bg-cream transition-colors rounded-full" href="#tools">
+<span class="material-symbols-outlined">build</span> Tools
+            </a>
+<a class="flex items-center gap-4 p-4 text-charcoal hover:bg-cream transition-colors rounded-full" href="#contact">
+<span class="material-symbols-outlined">mail</span> Contact
+            </a>
+</nav>
+</aside>
+<main>
+<!-- Hero Section -->
+<section class="min-h-screen flex items-center pt-24 pb-section-gap px-margin-mobile md:px-margin-desktop" id="home">
+<div class="max-w-container-max mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7">
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-charcoal mb-6 leading-tight">
+                        Building the future as a <span class="text-terracotta">Full Stack Web Developer.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-secondary mb-10 max-w-2xl">
+                        I specialize in building robust, scalable web applications and high-performance digital solutions that bridge the gap between complex engineering and human-centric design.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-terracotta text-linen px-8 py-4 rounded-lg font-label-sm text-label-sm hover:brightness-110 active:scale-95 transition-all inline-flex items-center gap-2" href="#projects">
+                            View Projects <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</a>
+<a class="border border-charcoal text-charcoal px-8 py-4 rounded-lg font-label-sm text-label-sm hover:bg-charcoal hover:text-linen active:scale-95 transition-all inline-flex items-center gap-2" href="Danell_Resume.png" target="_blank">
+                            View Resume <span class="material-symbols-outlined text-[18px]">description</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-5 relative mt-12 md:mt-0">
+<div class="aspect-square w-full max-w-md mx-auto relative group">
+<img alt="Professional portrait of Danell Turla, Full Stack Developer, looking confident in a modern workspace setting with warm natural lighting." class="w-full h-full object-cover rounded-full shadow-lg transition-all duration-700" src="https://lh3.googleusercontent.com/aida/ADBb0ui-5vbaRKM_-sJ6ynSobj_4HO40fsW0bA1gCvdF1lVWVYlF3tIx2NW30ybQZyL6jpQsgV4vBt5WLz-aNqx2GjbQM-mlL2vs5eIRyxsq7WN1Wzh8M5GH0KrmEwgW1UacK_PzF_XIsp-uysXErHv_zKNjIEtwj_OCohuQ6bKVdwoY3lZEnxRJxXBOsBPU9N-kpKNL-cvbTLALkPIscnOd2xVXLzdD9BaWEozmUtLM9NX9ExxF7IldwWy8VGJb"/>
+<div class="absolute -bottom-6 -right-6 bg-cream p-6 border border-charcoal/10 rounded-xl hidden md:block">
+<span class="font-headline-md text-headline-md text-terracotta">5+</span>
+<p class="text-label-sm font-label-sm uppercase tracking-widest text-charcoal">Projects Completed</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Bento Grid -->
+<section class="py-section-gap bg-surface-container-low" id="projects">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
+<div class="max-w-xl">
+<span class="text-terracotta font-label-sm text-label-sm uppercase tracking-[0.2em] mb-4 block">Showcase</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-charcoal">Featured Engineering Works</h2>
+</div>
+<p class="text-secondary font-body-md text-body-md max-w-sm">
+                        A curation of architectural solutions across the full stack ecosystem.
+                    </p>
+</div>
+<div class="bento-grid">
+<!-- Project 1: Large Feature -->
+<article class="col-span-12 md:col-span-8 bg-linen border border-charcoal/10 rounded-xl overflow-hidden group transition-all hover:border-terracotta/40">
+<div class="grid md:grid-cols-2 h-full">
+<div class="p-8 flex flex-col justify-between order-2 md:order-1">
+<div>
+<h3 class="font-headline-md text-headline-md mb-4 text-charcoal">E-commerce App</h3>
+<p class="text-body-md font-body-md text-secondary mb-6 leading-relaxed">
+                                        MERN E-Commerce Platform. Featuring dynamic product catalog with filtering, real-time search, secure checkout, and a comprehensive admin dashboard with real-time analytics.
+                                    </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-cream rounded-full text-label-sm font-label-sm text-charcoal">MERN</span>
+<span class="px-3 py-1 bg-cream rounded-full text-label-sm font-label-sm text-charcoal">Redux</span>
+<span class="px-3 py-1 bg-cream rounded-full text-label-sm font-label-sm text-charcoal">Stripe</span>
+</div>
+</div>
+<a class="text-terracotta font-label-sm text-label-sm inline-flex items-center gap-2 group-hover:translate-x-2 transition-transform" href="#">
+                                    Explored Case Study <span class="material-symbols-outlined">north_east</span>
+</a>
+</div>
+<div class="relative overflow-hidden order-1 md:order-2 h-64 md:h-full">
+<img alt="A sleek e-commerce web application dashboard displayed on a high-resolution laptop screen. The UI is minimalist with earthy tones, featuring vibrant product cards and analytical charts in the background. Soft studio lighting highlights the modern design elements." class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0uj66pCWBrzEG_mTGoWjlEPFz0A53kC48OsyNHklgKlvoiz1aH9wc440PSr8yrVyrmN_ejSqJVPbqUC9VGWaOJSp7HQSlKX82BMwfHzex_EcCccKYg4Og-NJJ7600roX4EunD3OmcE6GJz7rPAMjePMcN3DxEFGriXPYXCMjL7gVL_9Sc0mU8CT2hkr9jstOKGQ7xKsw3Dg4nSZL7NeNE4gNtD00gO-gVPG-gJZNTSVuQ885-b-IdSoODhJb"/>
+</div>
+</div>
+</article>
+<!-- Project 2: Stacked Small -->
+<article class="col-span-12 md:col-span-4 bg-linen border border-charcoal/10 rounded-xl overflow-hidden group hover:border-terracotta/40 transition-all">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Detailed view of API documentation interface on a computer screen, showing structured JSON responses and endpoints. The visual aesthetic is technical yet clean, with high contrast typography and subtle earth-toned accents in the code editor theme." class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0ugonFPE8avw0SBeEiVzyVpcWmgzUmz23ZTgcxY96Ve2LGBO3-HDVv1xpblnDOyEt8_JbtZiwNfummjIxCVTijDbnFAqZIbV59dJKfvWyGA8WbDTM5llTGfgn3T14MuaVZ4jtJycb54B5zFla-9j8J9TtaFDsH8bf6jjBq5gZYplt16RRNwZxnnQrT97XYrx95q6_2Benrp8vW01P6YkozBAgd3i12vPEj_r_zcksfFMqB5s-SQ5Mr54ZCI"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-[24px] mb-2 text-charcoal">E-commerce API</h3>
+<p class="text-body-md text-secondary mb-4 line-clamp-2">Dynamic E-commerce Workflow Management with secure authentication and inventory updates.</p>
+<span class="text-terracotta font-label-sm text-label-sm">View Documentation</span>
+</div>
+</article>
+<!-- Project 3: Small Card -->
+<article class="col-span-12 md:col-span-4 bg-linen border border-charcoal/10 rounded-xl overflow-hidden group hover:border-terracotta/40 transition-all">
+<div class="aspect-video relative overflow-hidden">
+<img alt="A high-performance course booking platform UI being edited in a professional design tool. The interface features elegant typography, rounded buttons, and a warm color palette of cream and terracotta, reflecting a user-centric and accessible learning environment." class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0ujcsQpEiBT41W9QfjY7Z8T2WPNom7gSoHQVwikG731OIYDBY3j8tIRkXW0WlscujdujLUxiWYDw1K1tDQYkMp6qqe0kKhz5ifz7O2I_wZ5pxt1ATPNLnZOvtNoE9zJEVkb_YR5BL_M3b0WOVOiNlnIByj-cetVj_romp0WUzv6zf29upl28YsDhsQOiw1nCvCogKK64kAbBhreK9voEJRhNjP3LQzh4rnOB9wyxNLTqHU-1KZsCHPQX--2m"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-[24px] mb-2 text-charcoal">Course Booking App</h3>
+<p class="text-body-md text-secondary mb-4 line-clamp-2">A MERN-stack system featuring comprehensive enrollment workflows and student management.</p>
+<span class="text-terracotta font-label-sm text-label-sm">View Live Project</span>
+</div>
+</article>
+<!-- Project 4: Medium Wide -->
+<article class="col-span-12 md:col-span-8 bg-linen border border-charcoal/10 rounded-xl overflow-hidden group hover:border-terracotta/40 transition-all">
+<div class="grid md:grid-cols-2 h-full">
+<div class="relative overflow-hidden h-64 md:h-full">
+<img alt="User interface prototype of an airline booking system, showcasing a streamlined flight search result page. The layout uses a sophisticated 12-column grid with subtle drop shadows and a clean, high-end travel aesthetic, emphasizing ease of use and speed." class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0ugxh6iwe4VxYU0MyabXw_uCL2-cTKBT7Fe66SIvgu2yd6ad_I43CMMB570KslPnLuiCqNfu3zGVhWSnHn2GByXqShkGjoyidwpv9MmgkdoUfmcWuE29nRtuyb6i2oM-dEyq8YybOoigxExkjdT4AU4vIaBY_qfVZYwiHDq_7JR5CB7Trb0RJFxsJbuLF2Sd8nhpBJWB8R-mC5Fo5dhub4ff2QWe1ntjkboOaXWg00Pr9xWN5DayhZ2WWeB6"/>
+</div>
+<div class="p-8 flex flex-col justify-center">
+<h3 class="font-headline-md text-headline-md mb-4 text-charcoal">Airline System</h3>
+<p class="text-body-md text-secondary mb-6">Interactive prototype simulating end-to-end booking functionalities, flight search, and payment processing.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-terracotta">flight_takeoff</span>
+<span class="material-symbols-outlined text-terracotta">credit_card</span>
+<span class="material-symbols-outlined text-terracotta">confirmation_number</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Tools & Competencies -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop" id="tools">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-section-gap items-center">
+<div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-charcoal mb-8">Technical Proficiency</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-12">I use a curated stack of modern tools and technologies to ensure precision at every layer of development.</p>
+<div class="space-y-12">
+<div>
+<h4 class="font-label-sm text-label-sm text-terracotta uppercase tracking-widest mb-6">Development Tools</h4>
+<div class="flex flex-wrap gap-4">
+<div class="flex items-center gap-3 bg-cream px-6 py-4 rounded-xl border border-charcoal/5 transition-transform hover:-translate-y-1">
+<span class="material-symbols-outlined text-charcoal">code</span>
+<span class="font-bold text-charcoal">VS Code</span>
+</div>
+<div class="flex items-center gap-3 bg-cream px-6 py-4 rounded-xl border border-charcoal/5 transition-transform hover:-translate-y-1">
+<span class="material-symbols-outlined text-charcoal">terminal</span>
+<span class="font-bold text-charcoal">Git Bash</span>
+</div>
+<div class="flex items-center gap-3 bg-cream px-6 py-4 rounded-xl border border-charcoal/5 transition-transform hover:-translate-y-1">
+<span class="material-symbols-outlined text-charcoal">palette</span>
+<span class="font-bold text-charcoal">Figma</span>
+</div>
+<div class="flex items-center gap-3 bg-cream px-6 py-4 rounded-xl border border-charcoal/5 transition-transform hover:-translate-y-1">
+<span class="material-symbols-outlined text-charcoal">edit</span>
+<span class="font-bold text-charcoal">Sublime</span>
+</div>
+</div>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm text-terracotta uppercase tracking-widest mb-6">Core Competencies</h4>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+<div class="border border-charcoal/10 p-4 rounded-lg text-center hover:border-terracotta/40 transition-colors">
+<span class="font-headline-md text-headline-md text-charcoal">HTML</span>
+</div>
+<div class="border border-charcoal/10 p-4 rounded-lg text-center hover:border-terracotta/40 transition-colors">
+<span class="font-headline-md text-headline-md text-charcoal">CSS</span>
+</div>
+<div class="border border-charcoal/10 p-4 rounded-lg text-center hover:border-terracotta/40 transition-colors">
+<span class="font-headline-md text-headline-md text-charcoal">BS5</span>
+</div>
+<div class="border border-charcoal/10 p-4 rounded-lg text-center hover:border-terracotta/40 transition-colors">
+<span class="font-headline-md text-headline-md text-charcoal">Git</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square bg-cream rounded-full absolute -top-20 -right-20 w-80 h-80 opacity-50 blur-3xl"></div>
+<div class="relative grid grid-cols-2 gap-4">
+<div class="space-y-4 pt-12">
+<img alt="A collection of professional development tools displayed on a clean white desk. It includes a smartphone showing a mobile-responsive design, a mechanical keyboard, and a notebook with wireframe sketches. The atmosphere is productive and organized with warm, soft sunlight." class="rounded-xl shadow-md transition-transform duration-500 hover:scale-[1.02]" src="https://lh3.googleusercontent.com/aida/ADBb0uhsNNU7QiElxSR5_R1PwdEWYgmkEfEXT0XQrgoceWh5wGfjoLYpUzT4WnG7Mb0hJuCZ9AOGEJw3RygOFHW4ZpROizDlB4DY3AXlwDv3079T9RdQx5h0xOEN0Ebd56ySiA-Nb6KDyS4G3pucTkLpGICUTR50sGq1eivq67D4wIQpHFGWySngj4F2banqxJi7snffd6abdm16SvS1TlSYY2TPTTueUwnNPIbD15_UawdbzJzKEbNOYDta1imr"/>
+<img alt="A detailed close-up of a high-resolution monitor showing Git terminal commands and complex code structures. The workspace is dimly lit with amber ambient lighting, creating a focused, high-end software engineering mood." class="rounded-xl shadow-md transition-transform duration-500 hover:scale-[1.02]" src="https://lh3.googleusercontent.com/aida/ADBb0uj_bVGNmGpagMXIHP2Np5A1nipYzCeW48Bdiy3yHglTjUqmfyP-uMD8B9vEwoRMrJ9FvSxIgOxrJKxmtHrH0rVJ2_m7QtHjzUgK3ZMM3zQb9JMI4frKL8WViu03FxX9sqgxj0TK8deulpjUMKMAz4g__lcYMWqESzDChSvw46J9q8PrDGzSuHdMyva_SyxgnVA9H1Mr5PzIjSZfAMbJuRDl4rgtFnZGIZVq2bA8voaKhqhQyEwZKryDJIc"/>
+</div>
+<div class="space-y-4">
+<img alt="An abstract digital artwork representing data flow and full-stack architecture. It uses geometric lines and glowing points in shades of terracotta and deep charcoal, set against a pristine linen background to evoke a sense of digital craftsmanship." class="rounded-xl shadow-md transition-transform duration-500 hover:scale-[1.02]" src="https://lh3.googleusercontent.com/aida/ADBb0uj-OYCLq2EeR2OY4Y9hSJZRvwPhVhMzX59weypmpqBsLZe25hQJZa_hdTfnXDW816QDIVp91iDd61InlrRSRs4rGzh88a_eNco9lbOAPbOcd3KKN9oRmnGE5r4ffAQTI7r67Ifo_HA1EYKJ90O4tATS9prx-exO_ldduNrzXAjx31chehpr8RZp1WI9FKo26OechvrK3HbLRpFtoF-QkVqurqEFHyg4_z1PfPPPLKqA1waoEGouddGmtWCW"/>
+<div class="bg-terracotta p-8 rounded-xl aspect-[0.75] flex items-end">
+<p class="text-headline-md text-linen font-bold">Bridging Engineering &amp; Human Design.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap bg-charcoal text-linen" id="contact">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-start">
+<div>
+<span class="text-terracotta font-label-sm text-label-sm uppercase tracking-widest mb-6 block">Contact</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-8">Let's discuss your vision.</h2>
+<p class="text-body-lg text-secondary-fixed-dim mb-12 max-w-md">Looking for a partner to build your next digital masterpiece? Let's discuss how I can help bring it to life.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-6 group cursor-pointer">
+<div class="w-12 h-12 rounded-full border border-linen/20 flex items-center justify-center transition-colors group-hover:bg-terracotta group-hover:border-terracotta">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-secondary-fixed-dim uppercase">Email Me</p>
+<p class="text-body-lg font-bold">turladanell01@gmail.com</p>
+</div>
+</div>
+<div class="flex items-center gap-6 group cursor-pointer">
+<div class="w-12 h-12 rounded-full border border-linen/20 flex items-center justify-center transition-colors group-hover:bg-terracotta group-hover:border-terracotta">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-secondary-fixed-dim uppercase">Based In</p>
+<p class="text-body-lg font-bold">Bay, Laguna</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-linen p-8 md:p-12 rounded-2xl">
+<form class="space-y-6" onsubmit="event.preventDefault();">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-sm text-label-sm text-charcoal mb-2" for="name">Name</label>
+<input class="w-full bg-transparent border-b border-charcoal/20 focus:border-terracotta outline-none py-3 text-charcoal transition-colors" id="name" name="name" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-charcoal mb-2" for="email">Email</label>
+<input class="w-full bg-transparent border-b border-charcoal/20 focus:border-terracotta outline-none py-3 text-charcoal transition-colors" id="email" name="email" required="" type="email"/>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-charcoal mb-2" for="message">Message</label>
+<textarea class="w-full bg-transparent border-b border-charcoal/20 focus:border-terracotta outline-none py-3 text-charcoal transition-colors" id="message" name="message" required="" rows="4"></textarea>
+</div>
+<button class="w-full bg-terracotta text-linen py-4 rounded-lg font-label-sm text-label-sm hover:brightness-110 active:scale-95 transition-all flex justify-center items-center gap-2" type="submit">
+                                Send Message <span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-linen border-t border-charcoal/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-center md:text-left">
+<p class="font-headline-md text-headline-md font-bold text-terracotta mb-2">Danell Turla</p>
+<p class="text-body-md text-secondary">Full Stack Web Developer</p>
+</div>
+<div class="flex gap-8">
+<a class="text-secondary hover:text-terracotta transition-colors font-label-sm text-label-sm" href="#projects">Portfolio</a>
+<a class="text-secondary hover:text-terracotta transition-colors font-label-sm text-label-sm" href="Danell_Resume.png" target="_blank">Resume</a>
+<a class="text-secondary hover:text-terracotta transition-colors font-label-sm text-label-sm" href="#">Privacy</a>
+</div>
+<div class="flex flex-col items-center md:items-end gap-2">
+<div class="flex gap-4">
+<a aria-label="LinkedIn" class="w-10 h-10 flex items-center justify-center border border-charcoal/10 rounded-full hover:bg-cream transition-colors" href="https://linkedin.com" target="_blank">
+<span class="material-symbols-outlined text-charcoal text-[20px]">share</span>
+</a>
+<a aria-label="Email" class="w-10 h-10 flex items-center justify-center border border-charcoal/10 rounded-full hover:bg-cream transition-colors" href="mailto:turladanell01@gmail.com">
+<span class="material-symbols-outlined text-charcoal text-[20px]">mail</span>
+</a>
+</div>
+<p class="text-label-sm font-label-sm text-secondary-fixed-variant">© 2026 Crafted with precision.</p>
+</div>
+</div>
+</footer>
+<!-- FAB for quick contact -->
+<a aria-label="Quick Talk" class="fixed bottom-8 right-8 bg-terracotta text-linen w-14 h-14 rounded-full shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-40" href="#contact">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+</a>
+<script>
+        // Drawer Logic
+        const menuBtn = document.getElementById('mobile-menu-toggle');
+        const closeBtn = document.getElementById('close-drawer');
+        const drawer = document.getElementById('nav-drawer');
+        const overlay = document.getElementById('drawer-overlay');
 
-  <nav class="navbar navbar-expand-lg bg-light custom-navbar">
-    <div class="container">
-      <a class="navbar-brand" href="#landing">Danell Turla</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ms-auto">
-          <a class="nav-link" aria-current="page" href="#landing">Home</a>
-          <a class="nav-link" href="#projects">Projects</a>
-          <a class="nav-link" href="#tools">Tools</a>
-          <a class="nav-link" href="#contact">Contact</a>
-        </div>
-      </div>
-    </div>
-  </nav>
+        const toggleDrawer = () => {
+            const isOpen = !drawer.classList.contains('translate-x-full');
+            if (isOpen) {
+                drawer.classList.add('translate-x-full');
+                overlay.classList.add('hidden');
+            } else {
+                drawer.classList.remove('translate-x-full');
+                overlay.classList.remove('hidden');
+            }
+        };
 
-  <section id="landing">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 my-5">
-          <h1 class="landing-heading">
-            Building the future as a <span class="highlight">Full Stack</span> Web Developer.
-          </h1>
-          <p class="landing-subtext">
-            I specialize in building robust, scalable web applications and high-performance digital solutions that bridge the gap between complex engineering and human-centric design.
-          </p>
-          <div class="d-flex gap-3 mt-4">
-            <!-- Changed from <a> to <div> -->
-            <div class="btn btn-view-projects">View Projects</div>
-            <div class="btn btn-lets-talk">Let's Talk</div>
-            <a  class="btn btn-lets-talk" href="Danell_Resume.png">View my Resume</a>
-          </div>
-        </div>
-        <div class="col-md-6 avatar-wrapper mt-5 mt-md-0">
-          <div class="avatar-shadow">
-            <div class="avatar-circle">
-              <img src="./images/danellpfp.jpg" alt="Danell Profile Image">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        menuBtn.addEventListener('click', toggleDrawer);
+        closeBtn.addEventListener('click', toggleDrawer);
+        overlay.addEventListener('click', toggleDrawer);
 
-  <section id="projects">
-    <div class="container-fluid projects-container">
-      <div class="row py-5 px-5">
-        <div class="col-md-6 showcase-font">Showcase</div>
-        <div class="projects-font">PROJECTS</div>
-      </div>
+        // Header transparency on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('top-app-bar');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-sm');
+            } else {
+                header.classList.remove('shadow-sm');
+            }
+        });
 
-      <div class="row px-5 pb-5">
-        <div class="col-md-3 col-sm-6 col-6 mb-4">
-          <div class="project-card">
-            <img src="./images/project1.jpg" alt="Project 1">
-            <!-- Changed from <a> to <div> -->
-            <div class="project-link d-block">E-commerce API Documentation</div>
-            <p>Dynamic E-commerce Workflow Management. The system features dynamic routes for order processing, real-time inventory updates, and secure user authentication. It also supports seamless automated order reporting and comprehensive product management. Documentary Backednd API published publicly using Postman.</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-6 mb-4">
-          <div class="project-card">
-            <img src="./images/project2.jpg" alt="Project 2">
-            <!-- Changed from <a> to <div> -->
-            <div class="project-link d-block">Course Booking API Documentation</div>
-            <p>RESTful API for managing course enrollments, featuring user registration, authentication, and retrieval of user details. Supports course creation, updates, archiving, activation, and student enrollment. Publicly documented using Postman.</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-6 mb-4">
-          <div class="project-card">
-            <img src="./images/project3.jpg" alt="Project 3">
-            <!-- Changed from <a> to <div> -->
-            <div class="project-link d-block">Course Booking App</div>
-            <p>A MERN-stack course enrollment system featuring user registration, authentication, and profile management. Authenticated users can create, update, archive, and activate courses. The platform also allows users to browse available courses and enroll seamlessly.</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-6 mb-4">
-          <div class="project-card">
-            <img src="./images/project4.jpg" alt="Project 4">
-            <!-- Changed from <a> to <div> -->
-            <div class="project-link d-block">E-commerce App</div>
-            <p>MERN E-Commerce Platform. The platform features dynamic product catalog with filtering and sorting, real-time search, seamless cart updates, secure checkout, and a comprehensive admin dashboard with real-time analytics and user management capabilities.</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-6 mb-4">
-          <div class="project-card">
-            <img src="./images/project5.jpg" alt="Project 5">
-            <!-- Changed from <a> to <div> -->
-            <div class="project-link d-block">Airline Booking System Mockup</div>
-            <p>Side Project: Conceptual design showcasing an intuitive UI for flight search, seat selection, and booking confirmation, focusing on user experience and workflow efficiency.</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-6 mb-4">
-          <div class="project-card">
-            <img src="./images/project6.jpg" alt="Project 6">
-            <!-- Changed from <a> to <div> -->
-            <div class="project-link d-block">Airline Booking System Prototype</div>
-            <p>Side Project: Interactive prototype simulating end-to-end airline booking functionalities, including flight search, reservation, payment processing, and real-time ticket management.</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-6 mb-4">
-          <div class="project-card">
-            <img src="./images/project7.jpg" alt="Project 7">
-            <!-- Changed from <a> to <div> -->
-            <div class="project-link d-block">Short Courses Capstone</div>
-            <p></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="tools">
-    <div class="container-fluid tools-container">
-      <div class="row pt-5 px-5">
-        <div class="col-md-6">
-          <div class="technology-text">TECHNOLOGY</div>
-          <div class="tools-text-tools">Tools</div>
-          <div class="row tools justify-content-start align-items-start mt-4">
-            <div class="col-auto tools-item">
-              <img src="./images/vscode.png" alt="VS Code Icon">
-            </div>
-            <div class="col-auto tools-item">
-              <img src="./images/sublime.png" alt="Sublime Text Icon">
-            </div>
-            <div class="col-auto tools-item">
-              <img src="./images/figma.png" alt="Figma Icon">
-            </div>
-            <div class="col-auto tools-item">
-              <img src="./images/git.png" alt="Git Bash Icon">
-            </div>
-          </div>
-          <div class="row tools-col justify-content-left gap-1 mt-2">
-            <div class="col-auto">VS Code</div>
-            <div class="col-auto">Sublime</div>
-            <div class="col-auto ps-3">Figma</div>
-            <div class="col-auto ps-4">Git Bash</div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="technology-text">COMPETENCIES</div>
-          <div class="tools-text-skills">Skills</div>
-          <div class="d-flex flex-wrap gap-2 mt-5">
-            <div class="col-auto skill-badge skill-badge-text">HTML</div>
-            <div class="col-auto skill-badge skill-badge-text">CSS</div>
-            <div class="col-auto skill-badge skill-badge-text">Bootstrap</div>
-            <div class="col-auto skill-badge skill-badge-text">Git</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container-fluid contact-container mt-5">
-      <div class="row">
-        <div class="col-md-6 pt-5 px-5">
-          <div class="contact-contact">CONTACT</div>
-          <div class="contact-git">Get in Touch</div>
-          <div class="contact-info">Looking for a partner to build your next digital masterpiece? Let's discuss your vision and how I can help bring it to life.</div>
-          <div class="d-flex align-items-center gap-3 mt-5">
-            <div class="contact-mail mt-0">
-              <img src="./images/gmaillogo.png" alt="Gmail Icon">      
-            </div>
-            <span class="email-text">turladanell01@gmail.com</span>
-          </div>
-          <div class="d-flex align-items-center gap-3">
-            <div class="contact-location mt-3">
-              <img src="./images/location.png" alt="Location Icon">
-            </div>
-            <span class="email-text">Bay, Laguna</span>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-container">
-            <form action="javascript:void(0);">
-              <div class="mb-4">
-                <label class="form-label">Name</label>
-                <input type="text" class="form-control contact-input" placeholder="Your Name" required>
-              </div>
-              <div class="mb-4">
-                <label class="form-label">Email</label>
-                <input type="email" class="form-control contact-input" placeholder="Your Email" required>
-              </div>
-              <div class="mb-4">
-                <label class="form-label">Message</label>
-                <textarea class="form-control contact-input" rows="5" placeholder="Tell me about your project..." required></textarea>
-              </div>
-              <button type="submit" class="btn-send">Send Message</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer-container py-5 px-5">
-    <div class="container-fluid">
-      <div class="row align-items-center">
-        <div class="col">
-          <span class="footer-portfolio">Danell Turla</span>
-          <p class="footer-portfolio">Full Stack Web Developer</p>
-          <p class="footer-portfolio">&copy;2026 Danell Angelo B. Turla. All rights reserved.</p>
-        </div>
-        <div class="col-auto">
-          <div class="d-flex gap-5">
-            <!-- Changed from <a> to <div> -->
-            <div class="footer-social-link">LinkedIn</div>
-            <div class="footer-social-link">Email</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I" crossorigin="anonymous"></script>
-</body>
-</html>
+        // Simple smooth scroll enhancement
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close drawer if open
+                    if (!drawer.classList.contains('translate-x-full')) {
+                        toggleDrawer();
+                    }
+                }
+            });
+        });
+    </script>
+</body></html>
